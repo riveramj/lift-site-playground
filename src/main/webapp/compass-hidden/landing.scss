@@ -1,61 +1,16 @@
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('/stylesheets/fonts/fontawesome-webfont.eot?v=3.0.1');
-  src: url('/stylesheets/fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
-    url('/stylesheets/fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
-    url('/stylesheets/fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Norwester is used under the Open Font License; see
- * /stylesheets/fonts/norwester-license.txt.
- *
- * Norwester was designed by Jamie Wilson (http://jamiewilson.io).
- */
-@font-face {
-  font-family: 'Norwester';
-  src: url('/stylesheets/fonts/norwester.eot?v=1.2');
-  src: url('/stylesheets/fonts/norwester.eot?#iefix&v=1.2') format('embedded-opentype'),
-    url('/stylesheets/fonts/norwester.woff?v=1.2') format('woff'),
-    url('/stylesheets/fonts/norwester.ttf?v=1.2') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-html, body {
-  min-height: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-
-  text-align: center;
-}
-
-header {
-  position: relative;
-
-  width: 1300px;
-  margin: 0 auto;
-}
+@import 'base';
 
 header:before {
   position: absolute;
-  z-index: -1; /* sit below other elements */
-
+  z-index: -1; /* sit below following elements */
+  left: 0;
   content: '';
 
-  width: 8000px;
+  background: #79246B url("../images/background-1x.png") repeat-x;
+  background: #79246B -webkit-image-set(url("../images/background-1x.png") 1x,
+                                        url("../images/background-2x.png") 2x) repeat-x;
+  width: 100%;
   height: 100%;
-  margin-left: -3250px;
-
-  background: #79246B url("/images/background-1x.png") repeat;
-  background: #79246B -webkit-image-set(url("/images/background-1x.png") 1x,
-                                        url("/images/background-2x.png") 2x) repeat;
 }
 
 h1 {
@@ -68,9 +23,9 @@ h1 {
   width: 103px;
   height: 93px;
 
-  background: transparent url("/images/logo-1x.png") no-repeat;
-  background: transparent -webkit-image-set(url("/images/logo-1x.png") 1x,
-                                            url("/images/logo-2x.png") 2x) no-repeat;
+  background: transparent url("../images/logo-1x.png") no-repeat;
+  background: transparent -webkit-image-set(url("../images/logo-1x.png") 1x,
+                                            url("../images/logo-2x.png") 2x) no-repeat;
 }
 
 #main-nav {
@@ -109,9 +64,9 @@ h1 {
   position: relative;
   top: 3px;
 
-  background: transparent url("/images/logos/github-1x.png") no-repeat;
-  background: transparent -webkit-image-set(url("/images/logos/github-1x.png") 1x,
-                                            url("/images/logo-s/github2x.png") 2x) no-repeat;
+  background: transparent url("../images/logos/github-1x.png") no-repeat;
+  background: transparent -webkit-image-set(url("../images/logos/github-1x.png") 1x,
+                                            url("../images/logos/github-2x.png") 2x) no-repeat;
 
   width: 21px;
   height: 21px;
@@ -154,7 +109,7 @@ ul.introductory-links {
 
   text-align: center;
 
-  padding: 30px 0 80px;
+  padding: 30px 0 67px;
 }
 
 ul.introductory-links > li {
@@ -193,13 +148,12 @@ ul.introductory-links .documentation {
 /* Background of the next chunk, which is really four sections. */
 header:after {
   position: absolute;
-  top: 100%;
+  left: 0;
   z-index: -1; /* sit below following elements */
 
   content: '';
 
-  width: 8000px;
-  margin-left: -3800px;
+  width: 100%;
   height: 515px;
 
   background: #DBE3EA;
@@ -316,9 +270,8 @@ section.information > p {
 
 #testimonials {
   margin: 90px auto 0;
-  width: 1300px;
 
-  padding: 0 65px 0;
+  padding: 0;
 }
 
 #testimonials > h4 {
@@ -425,48 +378,42 @@ section.information > p {
 }
 
 footer {
-  position: relative;
-
-  margin: 0 auto;
-  width: 1300px;
-  padding-bottom: 120px;
-
-  background: #9DB2C6;
-
   text-align: right;
+  padding-right: 86px;
 }
 
 footer:before {
   position: absolute;
-  top: 0;
   z-index: -1; /* sit below following elements */
-
+  left: 0;
   content: '';
 
-  width: 8000px;
-  margin-left: -3800px;
-  height: 100%;
-
   background: #9DB2C6;
+  width: 100%;
+  height: 271px;
+}
+
+footer .download-container {
+  position: relative;
 }
 
 footer .download {
   position: absolute;
-  top: 50px;
-  left: 135px;
+  left: 137px;
+  margin-top: 50px;
 
   width: 88px;
   padding-top: 100px;
 
   font-family: Norwester, Arial, sans-serif;
-  color: #475A6C;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
 
-  background: transparent url("/images/dark-logo-1x.png") no-repeat;
-  background: transparent -webkit-image-set(url("/images/dark-logo-1x.png") 1x,
-                                            url("/images/dark-logo-2x.png") 2x) no-repeat;
+  background: transparent url("../images/dark-logo-1x.png") no-repeat;
+  background: transparent -webkit-image-set(url("../images/dark-logo-1x.png") 1x,
+                                            url("../images/dark-logo-2x.png") 2x) no-repeat;
 }
 
 div.link-group {
@@ -507,7 +454,7 @@ div.link-group > ul {
 }
 
 div.link-group a {
-  color: #495D70;
+  color: #ffffff;
   text-decoration: none;
 
   line-height: 1.375rem;

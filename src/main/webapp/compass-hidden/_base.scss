@@ -1,0 +1,50 @@
+@import "neat/neat";
+
+/// Breakpoints
+$bp-small: 24em;
+$bp-medium: 48em;
+$bp-large: 64em;
+
+$max-allowed-width: 1300px;
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./fonts/fontawesome-webfont.eot?v=3.0.1');
+  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('./fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('./fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Norwester is used under the Open Font License; see
+ * /stylesheets/fonts/norwester-license.txt.
+ *
+ * Norwester was designed by Jamie Wilson (http://jamiewilson.io).
+ */
+@font-face {
+  font-family: 'Norwester';
+  src: url('./fonts/norwester.eot?v=1.2');
+  src: url('./fonts/norwester.eot?#iefix&v=1.2') format('embedded-opentype'),
+    url('./fonts/norwester.woff?v=1.2') format('woff'),
+    url('./fonts/norwester.ttf?v=1.2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  text-align: center;
+}
+
+body {
+  @include outer-container($max-allowed-width);
+}

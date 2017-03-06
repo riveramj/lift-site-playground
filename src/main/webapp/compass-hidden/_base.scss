@@ -3,7 +3,8 @@
 /// Breakpoints
 $bp-small: 24em;
 $bp-medium: 48em;
-$bp-large: 64em;
+$bp-med-large: 68em;
+$bp-large: 70em;
 
 $max-allowed-width: 1300px;
 
@@ -47,4 +48,15 @@ html, body {
 
 body {
   @include outer-container($max-allowed-width);
+}
+
+// The focus halo that some browsers like Chrome put on all inputs.
+*:focus {
+  outline: 0;
+}
+
+// By default, drop both the space and the border on a focused button.
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }

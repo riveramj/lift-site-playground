@@ -46,6 +46,14 @@ h1 {
   display: inline-block;
 
   padding-right: 45px;
+
+  &.desktop-nav {
+    display: none;
+
+    @media (min-width: $bp-large) {
+      display: inline-block
+    }
+  }
 }
 
 #main-nav #github {
